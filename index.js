@@ -16,10 +16,8 @@ if (drawing.getContext) {
       pageY
     } = e.touches[0]
     coordinates.push(pageX, pageY)
-
     if (coordinates.length > 2) {
-      console.log(coordinates)
-      drawObj.line(coordinates[0], coordinates[1], coordinates[2], coordinates[3])
+      drawObj.rect(coordinates[0], coordinates[1], coordinates[2], coordinates[3])
       coordinates = []
     }
 
